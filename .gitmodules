@@ -1,0 +1,3 @@
+[submodule "themes/krnl"]
+	path = themes/krnl
+	url = https://jp1971@github.com/athletics/krnl.git
