@@ -18,6 +18,8 @@ get_template_part( 'part', 'header' ); ?>
 			</div>	
 			<div class="col-xs-8 col-sm-4 col-md-4 col-lg-4">
 				<div class="row">
+					<?php wp_tag_cloud(); ?>
+					<hr>
 				</div>
 			</div>
 		</div>
