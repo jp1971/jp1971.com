@@ -20,5 +20,6 @@
 				</div>
 			</div>
 		</nav>
+		<hr>
 	</div>
 </header>
