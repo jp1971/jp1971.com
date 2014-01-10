@@ -55,7 +55,6 @@ class AthleticsInstagramOAuth {
 
 		// set the redirect uri on activation
 		add_option( 'redirect_uri', home_url( 'wp-admin/options-general.php?page=instagram_oauth_2_0') );
-		error_log(home_url( 'wp-admin/options-general.php?page=instagram_oauth_2_0') );
 
 		// Add action hooks
 		add_action( 'admin_menu', array( $this, 'add_plugin_menu' ) );
