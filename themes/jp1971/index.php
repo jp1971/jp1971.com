@@ -20,8 +20,8 @@ get_template_part( 'part', 'header' ); ?>
 					} ?>
 				</div>
 			</div>	
-			<div class="sidebar col-xs-8 col-sm-4 col-md-4 col-lg-4">
-				<h4><i class="fa fa-twitter-square"></i>Twitter</h4>
+			<div class="sidebar col-xs-8 col-sm-4 col-md-4 col-lg-4">			
+				<?php get_template_part( 'template-parts/part', 'twitter' ); ?>
 				<h4><i class="fa fa-instagram"></i>Instagram</h4>
 				<h4><i class="fa fa-github-square"></i>Github</h4>
 				<?php $feed = fetch_feed( 'http://github.com/jp1971.atom' ) ; ?>
