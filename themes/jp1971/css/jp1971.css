@@ -7216,14 +7216,34 @@ you can use the generic selector below, but it's slower:
   font-weight: normal;
   font-style: normal;
 }
-footer {
-  background-color: #000;
+body {
+  font-family: 'Anonymous Pro', sans-serif;
 }
-footer .navbar-brand a {
-  color: white;
+body.home h3 {
+  margin-top: 0px;
 }
-footer .navbar-brand h2 small {
-  color: white;
+a {
+  font-weight: bold;
+}
+a:hover {
+  border-bottom: 2px solid #999;
+  text-decoration: none;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  font-weight: 500;
+}
+.container.header hr {
+  margin: 0 0 20px 0;
+}
+.navbar {
+  margin-bottom: 10px;
+}
+.navbar-brand {
+  padding-bottom: 0;
 }
 .navbar-brand a {
   color: black;
@@ -7233,16 +7253,72 @@ footer .navbar-brand h2 small {
 }
 .navbar-brand h2 {
   float: left;
+  font-size: 18px;
   margin-top: 0;
   text-align: center;
 }
 .navbar-brand h2 span {
-  font-size: 32px;
+  font-size: 18px;
 }
 .navbar-brand .jp1971-icomoon-logo {
-  font-size: 64px;
+  font-size: 42px;
   float: left;
-  margin-left: 15px;
+  margin-left: 12px;
+}
+.link-list {
+  display: none;
+}
+footer {
+  background-color: #000;
+  margin-top: 30px;
+}
+footer .navbar-brand a {
+  color: white;
+}
+footer .navbar-brand h2 small {
+  color: white;
+}
+@media (min-width: 768px) {
+  .navbar-brand h2 {
+    font-size: 30px;
+  }
+  .navbar-brand h2 span {
+    font-size: 32px;
+  }
+  .navbar-brand .jp1971-icomoon-logo {
+    font-size: 64px;
+  }
+  .link-list {
+    display: block;
+    float: right;
+    margin: 60px 10px 0 0;
+  }
+}
+body.home h3,
+body.archive h3 {
+  margin-top: 0px;
+}
+body.home .tags,
+body.archive .tags {
+  margin-bottom: 20px;
+}
+body.archive h4 {
+  margin-top: 0;
+}
+.previous-next {
+  margin-top: 30px;
+}
+.previous-next a {
+  color: #999;
+}
+.previous-next a:hover {
+  color: #000;
+}
+.previous-next a .previous .fa-angle-double-left {
+  padding-right: 5px;
+}
+.previous-next a .next .fa-angle-double-right {
+  padding-left: 5px;
 }
 .sidebar .fa {
   margin-right: 10px;
@@ -7251,6 +7327,10 @@ footer .navbar-brand h2 small {
   border: 0 none;
   margin-bottom: 0;
   padding: 10px;
+}
+.sidebar .github-activity-item blockquote:before,
+.sidebar .github-activity-item blockquote:after {
+  content: none;
 }
 .sidebar .github-activity-item ul {
   list-style-type: none;
@@ -7264,14 +7344,4 @@ footer .navbar-brand h2 small {
 }
 .sidebar .github-activity-item img {
   display: none;
-}
-body {
-  font-family: 'Anonymous Pro', sans-serif;
-}
-a {
-  font-weight: bold;
-}
-a:hover {
-  border-bottom: 2px solid #999;
-  text-decoration: none;
 }
