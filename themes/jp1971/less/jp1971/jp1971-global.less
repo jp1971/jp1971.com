@@ -1,5 +1,10 @@
 body {
 	font-family: @font-family-base;
+	&.home {
+		h3 {
+			margin-top: 0px;
+		}
+	}
 }
 
 a {
@@ -7,5 +12,11 @@ a {
 	&:hover{
 		border-bottom: 2px solid #999;
 		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	a {
+		font-weight: 500;
 	}
 }
