@@ -26,7 +26,6 @@ get_template_part( 'part', 'header' );
 			</div>
 			<div class="sidebar col-xs-8 col-sm-4 col-md-4 col-lg-4">
 				<?php get_template_part( 'template-parts/part', 'twitter' ); ?>
-				<h4><i class="fa fa-instagram"></i>Instagram</h4>
 				<?php get_template_part( 'template-parts/part', 'github' ); ?>
 			</div>
 		</div>

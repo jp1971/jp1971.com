@@ -18,6 +18,17 @@
 						<span aria-hidden="true" class="jp1971-icomoon-logo"></span>
 					</a>
 				</div>
+				<ul class="link-list">
+					<l1>
+						<a href="mailto:jameson@jp1971.com">Contact</a>
+					</li>
+						|
+					<l1>
+						<a href="<?php bloginfo( 'rss2_url' ); ?>">
+							RSS
+						</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 		<hr>
