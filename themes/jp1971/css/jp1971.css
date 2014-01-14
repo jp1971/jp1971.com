@@ -7247,12 +7247,6 @@ footer .navbar-brand h2 small {
 .sidebar .fa {
   margin-right: 10px;
 }
-.sidebar .github-activity-item {
-  font-size: 12px;
-}
-.sidebar .github-activity-item a {
-  font-weight: 700;
-}
 .sidebar .github-activity-item blockquote {
   border: 0 none;
   margin-bottom: 0;
@@ -7274,7 +7268,10 @@ footer .navbar-brand h2 small {
 body {
   font-family: 'Anonymous Pro', sans-serif;
 }
+a {
+  font-weight: bold;
+}
 a:hover {
-  border-bottom: 1px dotted #000;
+  border-bottom: 2px solid #999;
   text-decoration: none;
 }
