@@ -10,34 +10,28 @@ get_template_part( 'part', 'header' ); ?>
 			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 				<div class="row">
 					<?php while ( have_posts() ) : the_post(); ?>
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<?php the_date(); ?>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<?php the_excerpt(); ?>	
-						<?php the_tags( '', ' | ' ); ?>
+						<div class="tags">
+							Posted in:&nbsp;<?php the_tags( '', ' | ' ); ?>						
+						</div>
 					<?php endwhile; // end of the loop. ?>
-					<?php if( function_exists( 'wp_paginate' ) ) {
-						wp_paginate();
-					} ?>
+					<div class="previous-next">
+						<?php
+						posts_nav_link( 
+							' ', 
+							'<div class="previous pull-left"><i class="fa fa-angle-double-left"></i>PREVIOUS</div>', 
+							'<div class="next pull-right">NEXT<i class="fa fa-angle-double-right"></i></div>' 
+						); 
+						?>
+					</div>
 				</div>
 			</div>	
 			<div class="sidebar col-xs-8 col-sm-4 col-md-4 col-lg-4">			
 				<?php get_template_part( 'template-parts/part', 'twitter' ); ?>
 				<h4><i class="fa fa-instagram"></i>Instagram</h4>
-				<h4><i class="fa fa-github-square"></i>Github</h4>
-				<?php $feed = fetch_feed( 'http://github.com/jp1971.atom' ) ; ?>
-				<?php
-					$html = '';
-					$i = 0;
-					foreach ($feed->get_items() as $item) {
-						if ($i == 3) {
-							break;
-						}
-						$content = $item->data['child']['http://www.w3.org/2005/Atom']['content'][0]['data'];
-						$html .= '<div class="github-activity-item">'.$content.'</div>';
-						$i++;
-					}
-					echo $html;
-				?>
+				<?php get_template_part( 'template-parts/part', 'github' ); ?>
 			</div>
 		</div>
 	</div>
