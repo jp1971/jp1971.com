@@ -1,5 +1,5 @@
 <?php
-$tweets = getTweets( 20, 'JamesonProctor', array( 'include_rts' => true ) ); //change number up to 20 for number of tweets
+$tweets = getTweets( 3, 'JamesonProctor', array( 'include_rts' => true ) ); //change number up to 20 for number of tweets
 if( is_array( $tweets ) ) {
 	echo '<h4><i class="fa fa-twitter-square"></i>Twitter</h4>';
     // to use with intents
