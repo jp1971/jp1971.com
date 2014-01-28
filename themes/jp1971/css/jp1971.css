@@ -7217,7 +7217,11 @@ you can use the generic selector below, but it's slower:
   font-style: normal;
 }
 body {
+  background-color: #000;
   font-family: 'Anonymous Pro', sans-serif;
+}
+body .main {
+  background-color: #fff;
 }
 body.home h3 {
   margin-top: 0px;
@@ -7239,6 +7243,9 @@ h5 a {
 img.aligncenter {
   display: block;
   margin: 0 auto;
+}
+.container.header {
+  background-color: #fff;
 }
 .container.header hr {
   margin: 0 0 20px 0;
