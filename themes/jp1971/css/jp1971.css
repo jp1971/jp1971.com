@@ -7316,6 +7316,9 @@ body.archive .tags {
 body.archive h4 {
   margin-top: 0;
 }
+body.single .tags {
+  margin-bottom: 20px;
+}
 .previous-next {
   margin-top: 30px;
 }
