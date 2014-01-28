@@ -7244,7 +7244,7 @@ img.aligncenter {
   display: block;
   margin: 0 auto;
 }
-.container.header {
+header {
   background-color: #fff;
 }
 .container.header hr {
