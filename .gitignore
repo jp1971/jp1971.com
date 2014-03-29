@@ -4,3 +4,5 @@
 /plugins/oauth-twitter-feed-for-developers/.tweetcache
 
 /uploads/
+
+/themes/.DS_Store
