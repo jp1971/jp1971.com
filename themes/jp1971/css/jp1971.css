@@ -7269,13 +7269,20 @@ body.single .tags {
 .previous-next a .next .fa-angle-double-right {
   padding-left: 5px;
 }
+.sidebar {
+  padding-left: 30px;
+}
 .sidebar .fa {
   margin-right: 10px;
 }
+.sidebar .github-activity-item {
+  margin-bottom: 10px;
+}
 .sidebar .github-activity-item blockquote {
   border: 0 none;
+  font-size: 14px;
   margin-bottom: 0;
-  padding: 10px;
+  padding: 0;
 }
 .sidebar .github-activity-item blockquote:before,
 .sidebar .github-activity-item blockquote:after {
