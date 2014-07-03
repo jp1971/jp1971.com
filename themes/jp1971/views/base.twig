@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+
+    <head>
+
+        {% block head %}
+        <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8" />
+        <title>{{wp_title}}</title>
+        <meta name="description" content="{{site.description}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="{{site.theme.link}}/favicon.ico">
+        {% endblock %}
+
+        {{function('wp_head')}}
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body class="{{body_class}}" data-source="base.twig">
+
+        <header class="site">
+            {% block header %}
+            {% endblock %}
+        </header>
+
+
+        <div class="main" {% block extra_main %}{% endblock %}>
+            {% block wrapper %}
+                {% block content %}Sorry, no content.{% endblock %}
+                {% block sidebar %}{% endblock %}
+            {% endblock %}
+        </div>
+
+
+        <footer class="site">
+            {% block footer %}
+            {% endblock %}
+        </footer>
+
+        {{ function('wp_footer') }}
+
+        <script>
+            krnl.bootstrap.init();
+        </script>
+
+    </body>
+</html>    
