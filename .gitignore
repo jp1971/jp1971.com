@@ -1,8 +1,12 @@
 .DS_Store
+
 /debug.log
 
 /plugins/oauth-twitter-feed-for-developers/.tweetcache
 
 /uploads/
 
+/plugins/.DS_Store
+
 /themes/.DS_Store
+
