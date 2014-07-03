@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 9]><html class="no-js ie ie9 lt-ie10" {{site.language_attributes}}> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+
+	<head>
+
+		{% block head %}
+
+			<meta charset="utf-8" />
+			<title>Docs | {{ site.name }}</title>
+
+		{% endblock %}
+
+		<link rel="stylesheet" type="text/css" href="{{ wp_content }}/themes/_krnl/plugins/krnl-docs/assets/css/_krnl_docs.css" />
+
+	</head>
+
+	<body class="krnl-docs">		
+
+		<header class="site-header">
+
+			{% block header %}
+			{% endblock %}
+
+		</header>
+
+		<div id="main">
+
+			{% block wrapper %}
+				{% block content %}{% endblock %}
+				{% block sidebar %}{% endblock %}
+			{% endblock %}
+
+		</div>
+
+		<footer class="site-footer">
+
+			{% block footer %}
+			{% endblock %}
+		</footer>
+		
+		{{ function('wp_footer') }}
+
+	</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<h1>{{ site.name }} Docs</h1>
+	<ul class="docs">
+
+	{% for post in posts %}
+
+		<li>
+			<a href="{{ post.link }}">{{ post.title }}</a>
+		</li>
+
+	{% endfor %}
+
+	</ul>
+
+	<form role="form" method="post" novalidate>
+		<select id="krnl_doc_order">
+			<option value="" class="default" disabled="disabled" selected="selected">Sort by</option>
+			<option value="name">Alphabetical</option>
+			<option value="DESC">Newest > Oldest</option>
+			<option value="ASC">Oldest > Newest</option>
+			{% for tag in function( 'get_terms', 'krnl_doc_tags' ) %}
+			{% if loop.first %}
+				<option value="" disabled="disabled">------------</option>
+			{% endif %}
+				<option value="tag-{{ tag.slug }}">{{ tag.name }}</option>
+			{% endfor %}
+		</select>
+	</form>
+
+{% endblock %}

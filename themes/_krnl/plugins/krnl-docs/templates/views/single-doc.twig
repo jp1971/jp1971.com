@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	
+	<h1>{{ post.title }}</h1>
+	<article>
+		{{ post.content }}
+	</article>
+	<hr />
+	<a class="docs-return" href="{{ site.url }}/docs">
+		&laquo; Return to {{ site.name}} Docs Index
+	</a>
+
+{% endblock %}

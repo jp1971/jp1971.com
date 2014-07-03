@@ -1,0 +1,53 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body.krnl-docs {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+}
+
+body.krnl-docs #main {
+	position: relative;
+	margin: 50px auto;
+	width: 940px;
+}
+
+body.krnl-docs a {
+	color: #000;
+}
+
+body.krnl-docs a.docs-return {
+	text-decoration: none;
+}
+
+body.krnl-docs a:hover {
+	color: #aaa;
+}
+
+body.krnl-docs ul.docs {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+body.krnl-docs ul.docs li {
+	font-size: 18px;
+	line-height: 1.5em;
+}
+
+body.krnl-docs form {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+body.krnl-docs ul.docs li a {
+	text-decoration: none;
+}
+
+@media ( max-width: 979px ) {
+	body.krnl-docs #main {
+		width: 90%;
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "config": {
+    "preferred-install": "dist"
+  },
+  "require": { 
+    "krnl": "dev-master",
+    "composer/installers": "~1.0"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.krnlthe.me"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "themes/_{$name}/": ["type:wordpress-theme"]
+    } 
+  }  
+}
