@@ -3001,27 +3001,6 @@ input[type="button"].btn-block {
 .navbar-inverse .navbar-link:hover {
   color: #ffffff;
 }
-.fade {
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-}
-.fade.in {
-  opacity: 1;
-}
-.collapse {
-  display: none;
-}
-.collapse.in {
-  display: block;
-}
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-}
 .clearfix:before,
 .clearfix:after,
 .container:before,
@@ -3208,8 +3187,8 @@ input[type="button"].btn-block {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../../krnl/fonts/fontawesome-webfont.eot?v=4.0.3');
-  src: url('../../krnl/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../../krnl/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../../krnl/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../../krnl/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  src: url('../../_krnl/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../../_krnl/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../../_krnl/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../../_krnl/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../../_krnl/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -4604,13 +4583,13 @@ h4 a,
 h5 a {
   font-weight: 500;
 }
-img {
-  width: 100%;
-  height: auto;
-}
 img .aligncenter {
   display: block;
   margin: 0 auto;
+}
+img.alignleft {
+  float: left;
+  margin: 0 15px 15px 0;
 }
 header {
   background-color: #fff;
@@ -4703,7 +4682,11 @@ body.single .tags {
 .previous-next a .next .fa-angle-double-right {
   padding-left: 5px;
 }
+body.page .content {
+  margin-bottom: 20px;
+}
 .sidebar {
+  margin-bottom: 20px;
   padding-left: 30px;
 }
 .sidebar .fa {
@@ -4734,4 +4717,7 @@ body.single .tags {
 }
 .sidebar .github-activity-item img {
   display: none;
+}
+body.single .tags {
+  margin: 20px 0 30px;
 }
