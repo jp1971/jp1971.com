@@ -1,0 +1,22 @@
+{% extends 'index.twig' %}
+
+{% block content %}
+
+<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+	<div class="row">
+		{{ post.post_date | date('F j, Y') }}
+		<h1>{{ post.title }}</h1>
+		{{ post.content }}
+		<div class="tags">
+			Posted in:
+			{% for tag in post.terms( 'tags' ) %}
+			
+				<a href="{{ tag.link }}">{{ tag.name }}</a>
+				{{ loop.last ? '' : ' | ' }}
+			
+			{% endfor %}					
+		</div>
+	</div>
+</div>
+
+{% endblock %}

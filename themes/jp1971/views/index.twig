@@ -1,57 +1,77 @@
 {% extends 'base.twig' %}
 
+{% block header %}
+
+<div class="container header">
+	<nav class="navbar" role="navigation">
+		<div class="row">
+			<div class="navbar-brand">
+				<a href="{{ site.url }}">
+					<h2>
+						<span>JP1971</span>
+						<br />
+						<small>thinking | making</small>
+					</h2>
+					<span aria-hidden="true" class="jp1971-icomoon-logo"></span>
+				</a>
+			</div>
+			<ul class="link-list">
+				<l1>
+					<a href="mailto:jameson@jp1971.com">Contact</a>
+				</li>
+					|
+				<l1>
+					<a href="<?php bloginfo( 'rss2_url' ); ?>">
+						RSS
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<hr>
+</div>
+
+{% endblock %}
+
 {% block wrapper %}
 
 <div class="container">
-	<div class="content">
+	<div class="content clearfix">
 
-	{% block content %}
+		{% block content %}
+		{% endblock %}
 
-	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-		<div class="row">
+		{% block sidebar %}
 
-			{% for post in posts %}
-
-				<?php the_date(); ?>
-				<h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-				{{ post.post_excerpt}}
-				<div class="tags">
-					Posted in:
-					{% for tag in post.terms( 'tags' ) %}
-					
-						<a href="{{ tag.link }}">{{ tag.name }}</a>
-						{{ loop.last ? '' : ' | ' }}
-					
-					{% endfor %}					
-				</div>
-
-			{% endfor %}
-
-			<div class="previous-next">
-				<?php
-				posts_nav_link( 
-					' ', 
-					'<div class="previous pull-left"><i class="fa fa-angle-double-left"></i>PREVIOUS</div>', 
-					'<div class="next pull-right">NEXT<i class="fa fa-angle-double-right"></i></div>' 
-				); 
-				?>
-			</div>
+		<div class="sidebar col-xs-8 col-sm-4 col-md-4 col-lg-4">			
+			{% include 'includes/twitter.twig' %}
+			{% include 'includes/github.twig' %}
 		</div>
-	</div>
 
-	{% endblock %}
-
-	{% block sidebar %}	
-
-	<div class="sidebar col-xs-8 col-sm-4 col-md-4 col-lg-4">			
-		<?php get_template_part( 'template-parts/part', 'twitter' ); ?>				
-		<?php get_template_part( 'template-parts/part', 'github' ); ?>
-	</div>
-
-	{% endblock %}
+		{% endblock %}
 
 	</div>
 </div>
 
 {% endblock %}
 
+{% block footer %}
+
+<div class="container footer">
+	<nav class="navbar" role="navigation">
+		<div class="row">
+			<div class="navbar-brand">
+				<a href="<?php echo home_url(); ?>">
+					<h2>
+						<span>JP1971</span>
+						<br />
+						<small>thinking | making</small>
+					</h2>
+					<span aria-hidden="true" class="jp1971-icomoon-logo"></span>
+				</a>
+			</div>
+		</div>
+	</nav>
+</div>
+
+{% endblock %}

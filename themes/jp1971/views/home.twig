@@ -1,0 +1,40 @@
+{% extends 'index.twig' %}
+
+{% block content %}
+
+<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+	<div class="row">
+
+		{% for post in posts %}
+
+			{{ post.post_date | date('F j, Y') }}
+			<h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+			<p>{{ post.post_excerpt}}</p>
+			<div class="tags">
+				Posted in:
+				{% for tag in post.terms( 'tags' ) %}
+				
+					<a href="{{ tag.link }}">{{ tag.name }}</a>
+					{{ loop.last ? '' : ' | ' }}
+				
+				{% endfor %}					
+			</div>
+
+		{% endfor %}
+
+		<div class="previous-next">
+			{% if pagination.prev %}
+		        <a href="{{pagination.prev.link}}">
+		        	<div class="previous pull-left"><i class="fa fa-angle-double-left"></i>PREVIOUS</div>
+		        </a>			    
+			{% endif %}
+			{% if pagination.next %}
+		        <a href="{{pagination.next.link}}">
+		        	<div class="next pull-right">NEXT<i class="fa fa-angle-double-right"></i></div>
+		        </a>			    
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

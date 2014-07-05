@@ -1,8 +1,8 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
-<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
-<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{ site.language_attributes }}> <!--<![endif]-->
 
     <head>
 
@@ -17,7 +17,7 @@
         <link rel="shortcut icon" href="{{site.theme.link}}/favicon.ico">
         {% endblock %}
 
-        {{function('wp_head')}}
+        {{ function( 'wp_head' ) }}
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,13 +28,12 @@
 
     </head>
 
-    <body class="{{body_class}}" data-source="base.twig">
+    <body class="{{ body_class }}" data-source="base.twig">
 
         <header class="site">
             {% block header %}
             {% endblock %}
         </header>
-
 
         <div class="main" {% block extra_main %}{% endblock %}>
             {% block wrapper %}
@@ -43,13 +42,12 @@
             {% endblock %}
         </div>
 
-
         <footer class="site">
             {% block footer %}
             {% endblock %}
         </footer>
 
-        {{ function('wp_footer') }}
+        {{ function( 'wp_footer' ) }}
 
         <script>
             krnl.bootstrap.init();
