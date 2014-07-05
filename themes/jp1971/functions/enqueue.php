@@ -3,8 +3,8 @@
 // The enqueue functions file for the JP1971 theme.
 
 //Print theme styles in header
-add_action('wp_enqueue_scripts', 'pnch_enqueue_styles');
-function pnch_enqueue_styles() {
+add_action( 'wp_enqueue_scripts', 'jp1971_enqueue_styles' );
+function jp1971_enqueue_styles() {
 
    wp_enqueue_style(
       'reset'//$handle
