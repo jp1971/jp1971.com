@@ -3,7 +3,7 @@
     "preferred-install": "dist"
   },
   "require": { 
-    "krnl": "dev-master",
+    "krnl": "2.0.14",
     "composer/installers": "~1.0"
   },
   "repositories": [
